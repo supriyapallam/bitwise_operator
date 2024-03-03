@@ -1,0 +1,25 @@
+
+
+module tb();
+  reg [0:3]a,b;
+  reg [0:3]out;
+  reg [0:3]out1;
+  reg [0:3]out2;
+  reg [0:3]out3;
+  reg [0:3]out4;
+  initial
+    begin
+      a=4'b1011;
+      b=4'b1x1z;
+      out=~a;
+      out1=a&b;
+      out2=a|b;
+      out3=a^b;
+      out4=~(a^b);
+    end
+  initial
+    begin
+      $monitor("a=%b,b=%b,out=%b,out1=%b,out2=%b,out3=%b,out4=%b",a,b,out,out1,out2,out3,out4);
+    end
+endmodule
+
